@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+  <style>
+    h2 {
+      font-family: Montserrat;
+      font-weight: 600;
+    }
+
+    li {
+      font-family: Montserrat;
+      font-weight: 400;
+    }
+  </style>
+  <title>Chuck Norris Joke Generator</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Chuck Norris Joke Generator</h2>
+    <form>
+      <div class="row valign-wrapper">
+        <div class="col s6">
+          <label for="number">Number of jokes</label>
+          <input type="number" min="0" id="number">
+          <button class="get-jokes waves-effect waves-light btn-small">Get Jokes</button>
+        </div>
+        <div class="col s6">
+          <img src="https://i.pinimg.com/236x/49/49/49/49494929a934d8a37beb94667e5d18d7--chuck-norris-funny-chuck-norris-facts.jpg" alt="">
+        </div>
+      </div>
+    </form>
+    <ul class="jokes collection"></ul>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
