@@ -15,10 +15,10 @@ function getJokes(e) {
 
       if(response.type === 'success') {
         response.value.forEach(function(joke){
-          output += `<li class="collection-item">${joke.joke}</li>`;
+          output += `<li>${joke.joke}</li>`;
         });
       } else {
-        output += '<li class="collection-item">Something went wrong</li>';
+        output += '<li>Something went wrong</li>';
       }
 
       document.querySelector('.jokes').innerHTML = output;
