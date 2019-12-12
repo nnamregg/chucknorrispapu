@@ -6,43 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Rubik:500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-image: url('Chuck-Norris_1986.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-    }
-    h2 {
-      font-family: 'Press Start 2P';
-      margin: 5rem auto;
-    }
-    label {
-      font-family: 'Press Start 2P';
-    }
-   .jokes {
-      background-color: rgba(255, 255, 255, .5);
-    }
-    li {
-      font-family: 'Rubik';
-      margin-left: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
   <title>Chuck Norris Joke Generator</title>
 </head>
 <body>
   <div class="container">
-    <h2>Chuck Norris Joke Generator</h2>
-    <form>
-      <div class="row">
-        <div class="six columns" style="margin:2rem auto">
-          <label for="number">Number of jokes</label>
-          <input class="u-full-width" type="number" min="0" id="number">
-          <button class="get-jokes" style="font-family: 'Press Start 2P'">Get Jokes</button>      
+    <div class="header">
+      <h2>Chuck Norris Joke Generator</h2>
+      <form>
+        <div class="row">
+          <div class="four columns" style="margin:2rem auto">
+            <label for="number">How many do you want?</label>
+            <input class="u-full-width" type="number" min="0" max="999" id="number">
+            <button class="get-jokes">Get Jokes</button>      
+          </div>
         </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="loader">
+      <!-- INSERT LOADER-->
+        <svg id="loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+          <g transform="translate(50,50)">
+            <g transform="scale(0.7)">
+            <circle cx="0" cy="0" r="50" fill="#ff312d"></circle>
+            <circle cx="0" cy="-28" r="15" fill="#ffd900">
+              <animateTransform attributeName="transform" type="rotate" dur="1s" repeatCount="indefinite" keyTimes="0;1" values="0 0 0;360 0 0"></animateTransform>
+            </circle>
+            </g>
+          </g>
+        </svg>
       </div>
-    </form>
-    <ol class="jokes"></ol>
+      <div class="twelve columns" id="staticscroll">
+        <ol class="jokes u-full-width"></ol>
+      </div>
+    </div>  
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>

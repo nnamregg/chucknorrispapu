@@ -1,0 +1,60 @@
+body {
+  background-image: url('Chuck-Norris_1986.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.header {
+  position: block;
+}
+
+h2 {
+  font-family: 'Press Start 2P';
+  margin: 5rem auto;
+  color: #ffd900;
+}
+
+label {
+  font-family: 'Press Start 2P';
+  color: #ffd900;
+}
+
+.get-jokes {
+  font-family: 'Press Start 2P';
+  color: #ffd900;
+}
+
+#staticscroll {
+  margin: 4rem auto 0rem;
+  max-height: 40vh;
+  display: flex;
+  overflow-y: auto;
+  background-color: rgba(83, 83, 83, 0.65);
+  scrollbar-width: none;
+}
+
+.loader {
+  display: none;
+}
+
+.jokes {
+  padding: 4rem 4rem;
+}
+
+li {
+  color: #f6f6f6;
+  font-family: 'Rubik';
+  margin:2rem 0rem 0rem;
+}
+
+#signature {
+  display: block;
+  margin: 5rem auto 2rem;
+  width: 50%;
+}
+
+#signature:hover {
+  fill: #ffd900;
+}
