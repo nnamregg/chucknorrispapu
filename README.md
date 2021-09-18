@@ -1,7 +1,7 @@
 # chucknorrispapu
 Just a Chuck Norris Joke Generator
 
-GitHub page: https://nnamregg.github.io/chucknorrispapu/git p
+GitHub page: https://nnamregg.github.io/chucknorrispapu/
 
 API:
 The Internet Chuck Norris Database - http://www.icndb.com/api/
