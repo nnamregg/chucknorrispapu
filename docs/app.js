@@ -1,6 +1,7 @@
 document.querySelector('.get-jokes').addEventListener('click', getJokes);
 
 function hideList() {
+  document.querySelector('#staticscroll').style.display = 'none';
   document.querySelector('.jokes').style.display = 'none';
 }
 
@@ -21,7 +22,7 @@ function getJokes(e) {
     loader.style.display = 'block';
 
     hideList();
-    
+
     xhr.open('GET', `https://api.icndb.com/jokes/random/${number}`, true);
 
     xhr.onload = function() {
@@ -35,6 +36,8 @@ function getJokes(e) {
 
           loader.style.display = 'none';
 
+          document.querySelector('#staticscroll').style.display = 'block';
+
           document.querySelector('.jokes').style.display = 'block';
 
           response.value.forEach(function(joke){
@@ -44,7 +47,7 @@ function getJokes(e) {
           output += '<li>Something went wrong</li>';
         }
 
-        output += `<a href="https://articulo.mercadolibre.com.ar/MLA-774850767-muneco-chuck-norris-ninja-warrior-negro-kenner-_JM" target="_blank"><svg id="signature" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        output += `<a href="https://en.wikipedia.org/wiki/Chuck_Norris_facts" target="_blank"><svg id="signature" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 164.9 58.3" style="enable-background:new 0 0 164.9 58.3;" xml:space="preserve">
      <g>
        <g>

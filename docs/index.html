@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Rubik:500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
@@ -12,7 +13,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <h2>Chuck Norris Joke Generator</h2>
+      <h1>Chuck Norris Joke Generator</h1>
       <form>
         <div class="row">
           <div class="four columns" style="margin:2rem auto">
@@ -28,16 +29,47 @@
   <div class="container">
     <div class="row">
       <div class="loader">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-          <g transform="translate(50,50)">
-            <g transform="scale(0.7)">
-            <circle cx="0" cy="0" r="50" fill="#ff312d"></circle>
-            <circle cx="0" cy="-28" r="15" fill="#ffd900">
-              <animateTransform attributeName="transform" type="rotate" dur="1s" repeatCount="indefinite" keyTimes="0;1" values="0 0 0;360 0 0"></animateTransform>
-            </circle>
-            </g>
+        <svg id="loaderSvg" width="65" height="65" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#ffd900">
+          <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">
+              <circle cx="22" cy="22" r="6" stroke-opacity="0">
+                  <animate attributeName="r"
+                       begin="1.5s" dur="3s"
+                       values="6;22"
+                       calcMode="linear"
+                       repeatCount="indefinite" />
+                  <animate attributeName="stroke-opacity"
+                       begin="1.5s" dur="3s"
+                       values="1;0" calcMode="linear"
+                       repeatCount="indefinite" />
+                  <animate attributeName="stroke-width"
+                       begin="1.5s" dur="3s"
+                       values="2;0" calcMode="linear"
+                       repeatCount="indefinite" />
+              </circle>
+              <circle cx="22" cy="22" r="6" stroke-opacity="0">
+                  <animate attributeName="r"
+                       begin="3s" dur="3s"
+                       values="6;22"
+                       calcMode="linear"
+                       repeatCount="indefinite" />
+                  <animate attributeName="stroke-opacity"
+                       begin="3s" dur="3s"
+                       values="1;0" calcMode="linear"
+                       repeatCount="indefinite" />
+                  <animate attributeName="stroke-width"
+                       begin="3s" dur="3s"
+                       values="2;0" calcMode="linear"
+                       repeatCount="indefinite" />
+              </circle>
+              <circle cx="22" cy="22" r="8">
+                  <animate attributeName="r"
+                       begin="0s" dur="1.5s"
+                       values="6;1;2;3;4;5;6"
+                       calcMode="linear"
+                       repeatCount="indefinite" />
+              </circle>
           </g>
-        </svg>
+      </svg>
       </div>
       <div class="twelve columns" id="staticscroll">
         <ol class="jokes u-full-width"></ol>
